@@ -22,13 +22,14 @@ const Footer = () => {
 };
 const Wrapper = styled.div`
   width: 100vw;
-  background: #1199ff;
+  background: #030301;
   justify-content: center;
   display: flex;
   padding: 0.75rem;
   margin-top: 2rem;
   .back-to-top {
     margin-right: 3rem;
+    color: #ffffa3;
   }
   .btn-container {
     margin-right: 0.5rem;
@@ -40,9 +41,10 @@ const Wrapper = styled.div`
     font-size: 30px;
     border: none;
     cursor: pointer;
+    color: #ffffa3;
   }
   .to-top-btn:hover {
-    color: yellow;
+    color: #3affff;
   }
 `;
 export default Footer;

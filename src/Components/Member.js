@@ -26,9 +26,10 @@ const Member = ({ member }) => {
 };
 const Wrapper = styled.div`
   margin-top: 3rem;
-  background: #fac4a5;
+  // background: #fffd98;
   border-radius: 5%;
   border: black 2px solid;
+  box-shadow: 5px 10px 8px #888888;
   .single-member {
     padding: 1.5rem;
     width: 30rem;
@@ -41,6 +42,12 @@ const Wrapper = styled.div`
   }
   .link {
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .link:hover {
+    color: #2660a4;
+    text-decoration: underline;
   }
   .mem-img {
     height: 24rem;

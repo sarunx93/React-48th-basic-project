@@ -29,28 +29,31 @@ const App = () => {
   return (
     <Router>
       <section>
-        <Navbar
-          members={members}
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          data={data}
-          setMembers={setMembers}
-        />
         <div>
           <h2 className="title">BNK48 Members</h2>
           <Routes>
             <Route
               path="/"
               element={
-                <MemberList
-                  members={members}
-                  filterMem={filterMem}
-                  teams={teams}
-                  all={all}
-                />
+                <>
+                  <MemberList
+                    members={members}
+                    filterMem={filterMem}
+                    teams={teams}
+                    all={all}
+                  />
+
+                  <Navbar
+                    members={members}
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                    data={data}
+                    setMembers={setMembers}
+                  />
+                </>
               }
             />
-            <Route path="/:name" element={<SingleMember />} />
+            <Route path="/:name" element={<SingleMember members={members} />} />
           </Routes>
         </div>
       </section>

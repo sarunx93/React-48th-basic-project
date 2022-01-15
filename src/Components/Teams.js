@@ -36,6 +36,7 @@ const Teams = ({ teams, filterMem, members, all }) => {
 };
 
 const Wrapper = styled.div`
+  background: #fffff3;
   .btn-container {
     display: flex;
     justify-content: center;
