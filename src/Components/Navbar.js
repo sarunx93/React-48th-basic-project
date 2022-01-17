@@ -18,7 +18,6 @@ const Navbar = ({ members, searchTerm, setSearchTerm, setMembers, data }) => {
     e.preventDefault();
     filterMember(searchTerm);
   };
-  console.log(searchTerm);
 
   return (
     <NavContainer>

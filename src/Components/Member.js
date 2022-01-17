@@ -3,6 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 const Member = ({ member }) => {
   const { name, img, fullnameEn, team, birthday } = member;
+  const formatDate = (dob) => {
+    const dateDob = new Date(dob).toGMTString().substring(5, 16);
+    // console.log(dateDob);
+    return dateDob;
+  };
   return (
     <Wrapper>
       <div className="single-member">
@@ -13,7 +18,7 @@ const Member = ({ member }) => {
           <h2 className="mem-name">{name}</h2>
           <p>Name : {fullnameEn.join(" ")}</p>
           <p>Team : {team}</p>
-          <p>Date of Birth : {birthday}</p>
+          <p>Date of Birth : {formatDate(birthday)}</p>
           <div className="link-container">
             <Link to={`/${name.toLowerCase()}`} className="link">
               More Details
