@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { formatDate } from "../helpers/helpers";
 const Member = ({ member }) => {
   const { name, img, fullnameEn, team, birthday } = member;
-  const formatDate = (dob) => {
-    const dateDob = new Date(dob).toGMTString().substring(5, 16);
-    // console.log(dateDob);
-    return dateDob;
-  };
+
   return (
     <Wrapper>
       <div className="single-member">

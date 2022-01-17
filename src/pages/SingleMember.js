@@ -4,6 +4,7 @@ import data from "../data";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { formatDate } from "../helpers/helpers";
 
 const SingleMember = () => {
   const { name } = useParams();
@@ -29,12 +30,6 @@ const SingleMember = () => {
       facebook,
       ig,
     });
-  };
-
-  const formatDate = (dob) => {
-    const dateDob = new Date(dob).toGMTString().substring(5, 16);
-    // console.log(dateDob);
-    return dateDob;
   };
 
   const calcAge = (dateOfBirth) => {
